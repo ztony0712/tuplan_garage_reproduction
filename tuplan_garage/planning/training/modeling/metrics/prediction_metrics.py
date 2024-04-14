@@ -52,7 +52,7 @@ class MinAverageDisplacementError(AbstractTrainingMetric):
             - targets_trajectory.trajectories[..., :2],
             dim=-1,
         ).mean(dim=-1)
-        min_ade = torch.min(ade, dim=-1)[0]
+        min_ade = torch.min(ade, dim=-1)[0] # [0]:ego
 
         return torch.mean(min_ade)
 

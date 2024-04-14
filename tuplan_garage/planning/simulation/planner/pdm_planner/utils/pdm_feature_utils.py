@@ -36,6 +36,7 @@ def create_pdm_feature(
     model: TorchModuleWrapper,
     planner_input: PlannerInput,
     centerline: PDMPath,
+    # traffic_light,
     closed_loop_trajectory: Optional[InterpolatedTrajectory] = None,
     device: str = "cpu",
 ) -> PDMFeature:
